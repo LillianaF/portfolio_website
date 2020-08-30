@@ -42,8 +42,11 @@ body {
   padding-top: 0.6rem;
   font-family: "Dancing Script", cursive;
   font-weight: 500;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.2rem;
   color: #4981b3 !important;
+}
+.navbar-toggler-icon {
+  float: right;
 }
 /*============= CAROUSEL =============*/
 #carousel {
