@@ -190,6 +190,9 @@ footer .svg-inline--fa {
 footer .svg-inline--fa:hover {
   color: #68a0d2;
 }
+.mail:hover {
+  text-decoration: none;
+}
 /*============= SOCKET =============*/
 .socket {
   background-color: #222222;
