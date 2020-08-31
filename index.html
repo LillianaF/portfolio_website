@@ -36,7 +36,10 @@
     <!-- End Top Bar -->
 
     <!-- Navigation -->
-    <nav class="navbar navbar-light bg-light navbar-expand-lg sticky-top">
+    <nav
+      id="top"
+      class="navbar navbar-light bg-light navbar-expand-lg sticky-top"
+    >
       <div class="container">
         <a href="index.html" class="navbar-brand">
           <h1 class="name">Lilliana Frantz</h1>
@@ -53,13 +56,15 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a href="index.html" class="nav-link active">Home</a>
+              <a href="#top" class="nav-link active">Home</a>
             </li>
             <li class="nav-item">
               <a href="#portfolio" class="nav-link">Portfolio</a>
             </li>
-            <li class="nav-item"><a href="" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="" class="nav-link">Contact Me</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+            <li class="nav-item">
+              <a href="#footer" class="nav-link">Contact Me</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -223,7 +228,11 @@
           <a href="#" class="btn btn-primary btn-learn">Learn More</a>
         </div>
         <div class="col-lg-6">
-          <img src="/img/IMG_2153.jpeg" class="img-fluid rounded-sm" w="50" />
+          <img
+            src="/img/IMG_2153.jpeg"
+            class="img-fluid rounded-sm beach"
+            w="50"
+          />
         </div>
       </div>
     </div>
@@ -337,7 +346,9 @@
       <div class="container">
         <div class="row">
           <div class="col-md-7 col-lg-8 col-xl-9 my-auto">
-            <h4>Looking for quality web development and desgin services?</h4>
+            <h4 id="jumbo">
+              Looking for quality web development and desgin services?
+            </h4>
           </div>
           <div class="col-md-5 col-lg-4 col-xl-3 pt-4 pt-md-0">
             <a href="#" class="btn btn-primary btn-lg">Contact Us</a>
@@ -348,7 +359,7 @@
     <!-- End Jumbotron -->
 
     <!-- Start Footer -->
-    <footer>
+    <footer id="footer">
       <div class="container">
         <div class="row text-light text-center py-4 justify-content-center">
           <div class="col-sm-10 col-md-8 col-lg-6">
