@@ -125,6 +125,19 @@ btn-primary:focus {
   border: 0.1rem solid #68a0d2;
   text-decoration: none;
 }
+/*-- Grid Portfolio --*/
+.portfolio {
+  margin: 4em 0;
+  position: relative;
+  justify-content: space-between;
+}
+.portfolio img {
+  height: 15rem;
+  width: 15rem;
+  margin: 1em;
+  border-radius: 5px;
+}
+
 /*== TWO COLUMN ==*/
 .line {
   border-top: 2px solid #b4b4b4;
