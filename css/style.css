@@ -126,6 +126,7 @@ btn-primary:focus {
   text-decoration: none;
 }
 /*-- Grid Portfolio --*/
+/*
 .portfolio {
   margin: 4em 0;
   position: relative;
@@ -137,7 +138,28 @@ btn-primary:focus {
   margin: 1em;
   border-radius: 5px;
 }
-
+*/
+.row {
+  margin: 10px -16px;
+}
+.row,
+.row > .column {
+  padding: 8px 8px 25px 8px;
+}
+.column {
+  float: left;
+  width: 33.33%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.content {
+  border-radius: 5px;
+  border: lightgrey solid 1px;
+  padding: 10px;
+}
 /*== TWO COLUMN ==*/
 .line {
   border-top: 2px solid #b4b4b4;
@@ -233,6 +255,9 @@ footer .svg-inline--fa:hover {
   .btn-lg {
     font-size: 0.95rem;
   }
+  .column {
+    width: 50%;
+  }
 }
 @media (max-width: 575.98px) {
   .carousel-caption h1 {
@@ -244,6 +269,13 @@ footer .svg-inline--fa:hover {
   .btn-lg {
     font-size: 0.1rem;
   }
+  .column {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 900px) {
+}
+@media screen and (max-width: 600) {
 }
 /*-- fixing jump down--*/
 :target::before {
