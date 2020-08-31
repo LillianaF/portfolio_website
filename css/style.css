@@ -305,12 +305,13 @@ footer .svg-inline--fa:hover {
 :target::before {
   content: "";
   display: block;
-  height: 90px;
-  margin: -90px 0 0;
-}
+  padding-top: 90px;
+  margin-top: -90px;
+} /*change this so when the screen is smaller it still works*/
 
 /*============ BOOTSTRAP BREAK POINTS:
-
+  height: 90px;
+  margin: -90px 0 0;
 Extra small (xs) devices (portrait phones, less than 576px)
 No media query since this is the default in Bootstrap
 
