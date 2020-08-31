@@ -10,3 +10,11 @@ function myFunction() {
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
 }
+
+$(".navbar-collapse a").click(function () {
+  $(".navbar-collapse").collapse("hide");
+});
+
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
