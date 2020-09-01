@@ -1,7 +1,7 @@
 <?php
-$name = $POST['name'];
-$visitor_email = $POST['email'];
-$message = $POST['message'];
+$name = $_POST['name'];
+$visitor_email = $_POST['email'];
+$message = $_POST['message'];
 
 $email_from = 'https://lilliana-portfolio.netlify.app';
 
