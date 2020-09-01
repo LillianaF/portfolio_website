@@ -28,7 +28,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.1rem;
   box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
-  z-index: 5 !important;
+  z-index: 10 !important;
   width: 100%;
 }
 .nav-item {
@@ -67,7 +67,7 @@ body {
 }
 /*============= CAROUSEL =============*/
 #carousel {
-  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
 .carousel-inner {
@@ -168,28 +168,55 @@ btn-primary:focus {
   height: auto;
 }
 .img-portfolio {
+  /*position: absolute;*/
   width: 100%;
   border-radius: 5px;
 } /*maybe change the cursor*/
-.img-portfolio:hover + .buttons {
-  display: flex;
+.container {
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 10;
+  width: 92%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+  border-radius: 5px;
+}
+.container:hover .overlay {
+  display: block;
+  background: rgba(0, 0, 0, 0.8);
+}
+/*.img-portfolio:hover + .buttons {
+  /*display: flex;*/
 
-  /*
+/*
     cursor: pointer;
     transition: opacity 1s ease 0s;
-  opacity: 50%;*/
-}
+  opacity: 50%;
+  }*/
+
 .buttons {
-  display: none;
+  /*display: none;*/
+  width: 40%;
+  height: auto;
+  display: flex;
   justify-content: center;
   flex-direction: column;
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   border: none;
   z-index: 2 !important;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.container:hover .buttons {
+  opacity: 1;
 }
 /*.button1 {
   display: none;
@@ -221,7 +248,7 @@ btn-primary:focus {
   margin-top: 0;
   margin-bottom: 2rem;
 }
-.beach {
+.myFace {
   margin-bottom: 2rem;
 }
 /*===== FIXED BACKGROUND IMG =====*/
@@ -230,7 +257,7 @@ btn-primary:focus {
   position: fixed;
 }
 .fixed-background {
-  z-index: 1;
+  z-index: 1 !important;
   padding: 10rem 0;
 }
 /*-- Emoji Navbar --*/
@@ -238,17 +265,41 @@ btn-primary:focus {
   background-image: linear-gradient(to right, #4981b3, #ac2615);
   min-height: 0 !important;
   padding: 0.4rem 0 !important;
-  z-index: 1;
+  z-index: 1 !important;
 }
 .emoji .svg-inline--fa {
   margin: 0 auto;
   color: white;
   font-size: 2rem;
 }
+/*-- Contact Form --*/
+.contact {
+  text-align: center;
+}
+.contact-title {
+  text-align: center;
+}
+.contact-title h2 {
+  font-size: 20px;
+}
+form {
+  transition: all 4s ease-in-out;
+}
+.form-control {
+  position: relative;
+  margin: 0 auto;
+  width: 50%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-radius: 0;
+  border-bottom: 1px solid #4981b3;
+  font-size: 18px;
+}
 /*============= FOOTER =============*/
 footer {
   background-color: #383838;
-  padding: 1rem 2rem 2rem;
+  padding: 1rem 2rem 1rem;
 }
 footer img {
   height: 3.5rem;
@@ -261,6 +312,8 @@ footer a,
   text-decoration: none;
 }
 ul.social {
+  position: relative;
+  justify-content: center;
   list-style-type: none;
   display: flex;
   max-width: 16rem;
@@ -285,7 +338,13 @@ footer .svg-inline--fa:hover {
   border-top: 0.1rem solid #4981b3;
 }
 /*============= MEDIA QUERIES =============*/
-
+/*-- fixing jump down--*/
+:target::before {
+  content: "";
+  display: block;
+  padding-top: 90px;
+  margin-top: -90px;
+}
 /* Devices under 1199px (xl) */
 @media (max-width: 1199.98px) {
   .carousel-caption h1 {
@@ -309,6 +368,12 @@ footer .svg-inline--fa:hover {
   .column {
     width: 50%;
   }
+  :target::before {
+    content: "";
+    display: block;
+    padding-top: 330px;
+    margin-top: -330px;
+  }
 }
 @media (max-width: 575.98px) {
   .carousel-caption h1 {
@@ -323,14 +388,14 @@ footer .svg-inline--fa:hover {
   .column {
     width: 100%;
   }
+  :target::before {
+    content: "";
+    display: block;
+    padding-top: 320px;
+    margin-top: -320px;
+  }
 }
-/*-- fixing jump down--*/
-:target::before {
-  content: "";
-  display: block;
-  padding-top: 90px;
-  margin-top: -90px;
-} /*change this so when the screen is smaller it still works*/
+/*change this so when the screen is smaller it still works*/
 
 /*============ BOOTSTRAP BREAK POINTS:
   height: 90px;
