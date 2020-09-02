@@ -3,7 +3,7 @@ $name = $_POST['name'];
 $visitor_email = $_POST['email'];
 $message = $_POST['message'];
 
-$email_from = 'https://lilliana-portfolio.netlify.app';
+$email_from = 'lillianafrantz.com';
 
 $email_subject = "New Form Submission";
 
