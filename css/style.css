@@ -164,7 +164,7 @@ btn-primary:focus {
   border-radius: 7px;
   border: lightgrey solid 1px;
   margin: 0 0.5rem;
-  padding: 15px;
+  padding: 15px 0;
   height: auto;
 }
 .img-portfolio {
@@ -174,12 +174,13 @@ btn-primary:focus {
 } /*maybe change the cursor*/
 .container {
   position: relative;
+  width: 100%;
 }
 .overlay {
   position: absolute;
   top: 0;
-  left: 10;
-  width: 90%;
+  align-content: center;
+  width: 91%;
   height: 100%;
   background: rgba(0, 0, 0, 0);
   transition: background 0.5s ease;
@@ -271,6 +272,18 @@ btn-primary:focus {
   margin: 0 auto;
   color: white;
   font-size: 2rem;
+}
+/*-- Core Technologies --*/
+.python {
+  width: 15%;
+}
+.python-top {
+  position: relative;
+  margin-top: -20px;
+}
+.python-bottom {
+  position: relative;
+  margin-left: -22px;
 }
 /*-- Contact Form --*/
 .contact {
@@ -374,6 +387,9 @@ footer .svg-inline--fa:hover {
     padding-top: 330px;
     margin-top: -330px;
   }
+  .overlay {
+    width: 92.5%;
+}
 }
 @media (max-width: 575.98px) {
   .carousel-caption h1 {
@@ -385,6 +401,19 @@ footer .svg-inline--fa:hover {
   .btn-lg {
     font-size: 0.1rem;
   }
+  /*.resume {
+    width: 50%;
+    font-size: 0.5rem;
+  }
+  .contact {
+    width: 50%;
+    font-size: 0.5rem;
+  }
+  .first-slider {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 5px;
+  }*/
   .column {
     width: 100%;
   }
@@ -394,6 +423,8 @@ footer .svg-inline--fa:hover {
     padding-top: 320px;
     margin-top: -320px;
   }
+  .overlay {
+    width: 91%;
 }
 /*change this so when the screen is smaller it still works*/
 
