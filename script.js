@@ -18,3 +18,9 @@ $(".navbar-collapse a").click(function () {
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
+
+$(document).ready(function () {
+  $(".second-button").on("click", function () {
+    $(".animated-icon2").toggleClass("open");
+  });
+});
