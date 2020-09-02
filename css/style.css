@@ -20,6 +20,10 @@ body {
   font-size: 1.1rem;
 }
 /*============= NAVIGATION =============*/
+.navbar-toggler {
+  color: #7aaec4;
+  border: none;
+}
 .navbar-brand img {
   height: 3rem;
 } /*not applicable anymore*/
