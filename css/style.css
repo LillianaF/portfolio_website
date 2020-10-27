@@ -1,5 +1,7 @@
 html {
   scroll-behavior: smooth;
+  height: 100%;
+  margin: 0;
 }
 /*-- Body Reset --*/
 body {
@@ -7,6 +9,29 @@ body {
   font-family: "Montserrat", sans-serif;
   color: #616971;
   width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.bg {
+  background-image: url(/img/IMG_2153.jpeg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+}
+.arrow {
+z-index: 17 !important;
+}
+.text-block {
+  position: absolute;
+  bottom: 18rem;
+  right: 35rem;
+  background-color: black;
+  opacity: 80%;
+  color: white;
+  padding: 25px 20px;
+  border-radius: 15px;
 }
 /*============= TOP BAR HEADER =============*/
 .top-bar {
@@ -28,11 +53,13 @@ body {
   height: 3rem;
 } /*not applicable anymore*/
 .navbar {
+  position: fixed;
+  margin-top: 0 !important;
   font-size: 1.15rem;
   font-weight: 600;
   letter-spacing: 0.1rem;
   box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
-  z-index: 10 !important;
+  z-index: 15 !important;
   width: 100%;
 }
 .nav-item {
@@ -59,15 +86,11 @@ body {
 .progress-container {
   width: 100%;
   height: 8px;
-  position: fixed;
-  z-index: 5;
 }
 .progress-bar {
   height: 8px;
   background: #4981b3;
   width: 0%;
-  position: fixed;
-  z-index: 5;
 }/*
 .animated-icon2 {
   width: 30px;
@@ -145,21 +168,21 @@ body {
     left: 50%;
     }*/
 /*============= CAROUSEL =============*/
-#carousel {
+/*#carousel {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
 .carousel-inner {
   max-height: 38rem !important;
 }
-/*---Change Carousel Transition Speed --*/
+/*---Change Carousel Transition Speed --
 .carousel-item-next,
 .carousel-item-prev,
 .carousel-item.active {
   transition: transform 1.2s ease;
 }
 /*-- Carousel Content --*/
-.carousel-caption {
+/*.carousel-caption {
   position: absolute;
   top: 54%;
   transform: translateY(-50%);
@@ -180,7 +203,7 @@ body {
 .carousel-caption h3 {
   font-size: 2.2rem;
   text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 1);
-}
+}*/
 .btn-lg,
 btn-md {
   border-radius: 5px;
